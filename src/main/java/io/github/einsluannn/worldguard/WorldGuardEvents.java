@@ -1,6 +1,6 @@
-package com.einsluannn.worldguard;
+package io.github.einsluannn.worldguard;
 
-import com.einsluannn.worldguard.entry.Entry;
+import io.github.einsluannn.worldguard.entry.Entry;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldguard.WorldGuard;
 import com.sk89q.worldguard.protection.ApplicableRegionSet;

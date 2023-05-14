@@ -1,4 +1,4 @@
-package com.einsluannn.worldguard.events;
+package io.github.einsluannn.worldguard.events;
 
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import org.bukkit.Bukkit;
@@ -14,22 +14,22 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
-public class RegionsEnteredEvent extends Event implements Cancellable {
+public class RegionsLeftEvent extends Event implements Cancellable {
 
     private static final HandlerList handlers = new HandlerList();
-    private boolean cancelled = false;
+    private boolean cancelled=false;
     private final UUID uuid;
     private final Set<ProtectedRegion> regions;
     private final Set<String> regionsNames;
 
-    public RegionsEnteredEvent(UUID playerUUID, @Nullable Set<ProtectedRegion> regions) {
+    public RegionsLeftEvent(UUID playerUUID, @Nullable Set<ProtectedRegion> regions) {
         this.uuid = playerUUID;
         this.regionsNames = new HashSet<>();
         this.regions = new HashSet<>();
 
-        if(regions != null) {
+        if (regions != null) {
             this.regions.addAll(regions);
-            for(ProtectedRegion region : regions) {
+            for (ProtectedRegion region : regions) {
                 this.regionsNames.add(region.getId());
             }
         }
