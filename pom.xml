@@ -4,11 +4,35 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.einsluannn</groupId>
+    <groupId>io.github.einsluannn</groupId>
     <artifactId>worldguard</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>worldguard-regionevents</name>
+    <description>Libary for WorldGuard Events</description>
+    <url>https://github.com/EinsLuannn/worldguard-regionevents</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/EinsLuannn/worldguard-regionevents.git</connection>
+        <developerConnection>scm:git:ssh://github.com:EinsLuannn/worldguard-regionevents.git</developerConnection>
+        <url>https://github.com/EinsLuannn/worldguard-regionevents</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Luan Simnica</name>
+            <email>javainterface@gmail.com</email>
+            <organization>com.github.einsluannn</organization>
+            <organizationUrl>https://github.com/EinsLuannn/worldguard-regionevents</organizationUrl>
+        </developer>
+    </developers>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,8 +45,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.19</source>
-                    <target>1.19</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
