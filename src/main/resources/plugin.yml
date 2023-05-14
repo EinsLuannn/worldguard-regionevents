@@ -1,0 +1,6 @@
+name: worldguard-regionevents
+version: '${project.version}'
+main: com.luan.worldguard.WorldGuardEvents
+api-version: 1.19
+author: EinsLuannn
+depend: [WorldGuard]
