@@ -1,6 +1,6 @@
 name: worldguard-regionevents
 version: '${project.version}'
-main: io.github.einsluannn.worldguard.WorldGuardEvents
+main: com.einsluannn.worldguard.WorldGuardEvents
 api-version: 1.19
 author: EinsLuannn
 depend: [WorldGuard]

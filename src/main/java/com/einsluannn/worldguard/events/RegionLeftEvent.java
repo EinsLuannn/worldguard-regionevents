@@ -1,4 +1,4 @@
-package io.github.einsluannn.worldguard.events;
+package com.einsluannn.worldguard.events;
 
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import org.bukkit.Bukkit;
@@ -10,29 +10,20 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
 
-public class RegionsEnteredEvent extends Event implements Cancellable {
+public class RegionLeftEvent extends Event implements Cancellable {
 
     private static final HandlerList handlers = new HandlerList();
     private boolean cancelled = false;
     private final UUID uuid;
-    private final Set<ProtectedRegion> regions;
-    private final Set<String> regionsNames;
+    private final ProtectedRegion region;
+    private final String regionName;
 
-    public RegionsEnteredEvent(UUID playerUUID, @Nullable Set<ProtectedRegion> regions) {
+    public RegionLeftEvent(UUID playerUUID, @NotNull ProtectedRegion region) {
         this.uuid = playerUUID;
-        this.regionsNames = new HashSet<>();
-        this.regions = new HashSet<>();
-
-        if(regions != null) {
-            this.regions.addAll(regions);
-            for(ProtectedRegion region : regions) {
-                this.regionsNames.add(region.getId());
-            }
-        }
+        this.region = region;
+        this.regionName = region.getId();
     }
 
     @Contract(pure = true)
@@ -56,13 +47,13 @@ public class RegionsEnteredEvent extends Event implements Cancellable {
     }
 
     @NotNull
-    public Set<ProtectedRegion> getRegions() {
-        return regions;
+    public String getRegionName() {
+        return regionName;
     }
 
     @NotNull
-    public Set<String> getRegionsNames() {
-        return regionsNames;
+    public ProtectedRegion getRegion() {
+        return region;
     }
 
     @Override
@@ -72,6 +63,6 @@ public class RegionsEnteredEvent extends Event implements Cancellable {
 
     @Override
     public void setCancelled(boolean cancelled) {
-        this.cancelled=cancelled;
+        this.cancelled = cancelled;
     }
 }
