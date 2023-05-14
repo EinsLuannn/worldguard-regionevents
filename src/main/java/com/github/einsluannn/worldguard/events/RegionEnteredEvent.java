@@ -1,4 +1,4 @@
-package com.luan.worldguard.events;
+package com.github.einsluannn.worldguard.events;
 
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import org.bukkit.Bukkit;

@@ -1,5 +1,6 @@
-package com.luan.worldguard.entry;
+package com.github.einsluannn.worldguard.entry;
 
+import com.github.einsluannn.worldguard.events.*;
 import com.luan.worldguard.events.*;
 import com.sk89q.worldedit.util.Location;
 import com.sk89q.worldguard.LocalPlayer;
